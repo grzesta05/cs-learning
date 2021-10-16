@@ -6,7 +6,7 @@ namespace _9zadań
 {
     class zadanie2
     {
-        public static void z3()
+        public static void z2()
         {
             int y = int.Parse(Console.ReadLine());
             int x = y;
