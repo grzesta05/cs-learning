@@ -7,7 +7,7 @@ namespace _9zadań
     {
         static void Main(string[] args)
         {
-            zadanie5.z5();
+            zadanie7.z7();
         }
     }
 }
