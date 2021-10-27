@@ -25,3 +25,16 @@ C:\Users\grzes\Documents\GitHub\c-\9 zadań początkowych\9zadań\9zadań\obj\De
 C:\Users\grzes\Documents\GitHub\c-\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.dll
 C:\Users\grzes\Documents\GitHub\c-\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.pdb
 C:\Users\grzes\Documents\GitHub\c-\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.genruntimeconfig.cache
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.exe
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.deps.json
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.runtimeconfig.json
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.runtimeconfig.dev.json
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.dll
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.pdb
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.csprojAssemblyReference.cache
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.AssemblyInfoInputs.cache
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.AssemblyInfo.cs
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.csproj.CoreCompileInputs.cache
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.dll
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.pdb
+C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.genruntimeconfig.cache
