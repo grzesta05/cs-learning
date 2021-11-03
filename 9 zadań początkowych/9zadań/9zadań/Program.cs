@@ -10,16 +10,16 @@ namespace _9zadań
             Console.WriteLine("<-- Zadanie 1 -->"); //123, 4,21 
             zadanie1.z1();
             Console.WriteLine("<-- Zadanie 1* -->");
-                //1
-                //2
-                //3
-                //4
-                //5
-                //6
-                //7
-                //8
-                //9
-                //10
+            //    1
+            //    2
+            //    3
+            //    4
+            //    5
+            //    6
+            //    7
+            //    8
+            //    9
+            //    10
             zadanie11.z2();
             Console.WriteLine("<-- Zadanie 2 -->"); //1287863
             zadanie2.z2();
@@ -31,7 +31,7 @@ namespace _9zadań
             zadanie4.z4();
             Console.WriteLine("<-- Zadanie 5 -->"); //p555ppp7www
             zadanie5.z5();
-            Console.WriteLine("<-- Zadanie 6 -->"); 
+            Console.WriteLine("<-- Zadanie 6 -->");
             zadanie6.z6();
             Console.WriteLine("<-- Zadanie 7 -->"); //25
             zadanie7.z7();
@@ -49,7 +49,7 @@ namespace _9zadań
             zadanie12.z12();
             Console.WriteLine("<-- Zadanie 13 -->");//gadg12ASFAV31das2's;a]wfda'v.1
             zadanie13.z13();
-            
+
         }
     }
 }

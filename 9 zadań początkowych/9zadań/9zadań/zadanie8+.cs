@@ -7,20 +7,26 @@ namespace _9zadań
     
     class zadanie8plus
     {
-        static public int silnia(int n, int o)
+        static public int dwumian(int n, int k)
         {
-            if (n <=  1)
-                return o;
-          
-            o *= n;
-            return silnia(n-1, o);
+            if (k == 0 || n == k)
+                return 1;
+            return dwumian(n - 1, k - 1) + dwumian(n - 1, k);
         }
         static public void z8plus()
         {
             Console.WriteLine("Dwumian Newtona. Podaj n i k");
             int n =int.Parse(Console.ReadLine());
             int k =int.Parse(Console.ReadLine());
-            Console.WriteLine(silnia(n, 1)/(silnia(k,1)*silnia(n-k,1)));
+            if(k > n)
+            {
+                Console.WriteLine("Zamieniono n i k, bo podano złe dane");
+                int i = k;
+                k = n;
+                n = i;
+            }
+            Console.WriteLine(dwumian(n,k));
+           
         }
     }
 }
