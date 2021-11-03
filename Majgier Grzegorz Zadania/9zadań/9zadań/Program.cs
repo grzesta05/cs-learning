@@ -4,7 +4,38 @@ using System;
 namespace _9zadań
 {
     class Program
+
     {
+        /*
+123
+4,21
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+1287863
+189083908098197
+word@press
+999
+p555ppp7www
+25
+46
+23
+10
+10
+11
+36 
+*
+12
+100
+gadg12ASFAV31das2's;a]wfda'v.1 
+         */
         static void Main(string[] args)
         {
             Console.WriteLine("<-- Zadanie 1 -->"); //123, 4,21 

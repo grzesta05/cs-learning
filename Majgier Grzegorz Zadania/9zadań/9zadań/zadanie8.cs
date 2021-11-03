@@ -9,11 +9,9 @@ namespace _9zadań
         static public int euklides(int a, int b)
         {
             if (b == 0)
-                return a;
-            int c = a % b;
-            a = b;
-            b = c;
-            return euklides(a, b);
+               return a;
+            else
+               return euklides(b, a%b);
         }
         static public void z8()
         {
