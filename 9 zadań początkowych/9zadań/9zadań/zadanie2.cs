@@ -13,7 +13,7 @@ namespace _9zadań
             foreach(int i in tab)
             {   
                 tab[i] = int.Parse(Console.ReadLine());
-                sum += tab[i];
+                sum += (tab[i] % 3 ==0 || tab[i] % 5 == 0 ?  tab[i] : 0 );
             }
             Console.WriteLine($"Suma to: {sum}, a średnia to {(double)sum/10}");
         }

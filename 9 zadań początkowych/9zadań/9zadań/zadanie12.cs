@@ -13,7 +13,7 @@ namespace _9zadań
             Random random = new Random();
             for (int i = 0; i < tab.Length; i++)
             {
-               tab[i] = random.Next(-100, 100);
+               tab[i] = random.Next(-100, 101);
                 if (tab[i] % 2 == 0)
                     parz++;
                 if (tab[i] >= 0)
