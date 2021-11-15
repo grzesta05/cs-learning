@@ -38,3 +38,17 @@ C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\ob
 C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.dll
 C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.pdb
 C:\Users\majgier grzegorz\Documents\c#\9 zadań początkowych\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.genruntimeconfig.cache
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.exe
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.deps.json
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.runtimeconfig.json
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.runtimeconfig.dev.json
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.dll
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\bin\Debug\netcoreapp3.1\9zadań.pdb
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.csproj.AssemblyReference.cache
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.AssemblyInfoInputs.cache
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.AssemblyInfo.cs
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.csproj.CoreCompileInputs.cache
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.dll
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.pdb
+C:\Users\grzes\Documents\GitHub\c-\Zadania\9zadań\9zadań\obj\Debug\netcoreapp3.1\9zadań.genruntimeconfig.cache
