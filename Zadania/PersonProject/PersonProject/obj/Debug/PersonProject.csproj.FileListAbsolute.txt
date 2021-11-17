@@ -1,0 +1,7 @@
+C:\Users\majgier grzegorz\source\repos\PersonProject\PersonProject\bin\Debug\PersonProject.exe.config
+C:\Users\majgier grzegorz\source\repos\PersonProject\PersonProject\bin\Debug\PersonProject.exe
+C:\Users\majgier grzegorz\source\repos\PersonProject\PersonProject\bin\Debug\PersonProject.pdb
+C:\Users\majgier grzegorz\source\repos\PersonProject\PersonProject\obj\Debug\PersonProject.csprojAssemblyReference.cache
+C:\Users\majgier grzegorz\source\repos\PersonProject\PersonProject\obj\Debug\PersonProject.csproj.CoreCompileInputs.cache
+C:\Users\majgier grzegorz\source\repos\PersonProject\PersonProject\obj\Debug\PersonProject.exe
+C:\Users\majgier grzegorz\source\repos\PersonProject\PersonProject\obj\Debug\PersonProject.pdb
