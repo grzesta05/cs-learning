@@ -8,19 +8,20 @@ namespace PersonProject
 {
     public enum Sex
     {
-        Kobieta,
-        Mężczyzna,
-        Inne
+        Woman,
+        Man,
+        Other
     }
     class Program
     {
 
         static void Main(string[] args)
         {
-            Person a = new Person("Frfr", "Forfor", "1000-12-12", "11111111111", Sex.Mężczyzna);
-            a.Surname = "mickIewIcz";
-            Console.WriteLine(a.Age());
-            Console.WriteLine(a.Name);
+            Person a = new Person("BEaTa", "NOWak", "1992-10-22", "92102201347", Sex.Woman);
+            Person b = new Person("JAn", "JanoWski", "1993-03-15", "92031507772", Sex.Man, "50594434");
+            a.ToString();
+            b.ToString();
+            Console.WriteLine(a.hoursLived(8));
             Console.ReadKey();
         }
     }
