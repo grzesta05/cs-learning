@@ -17,11 +17,9 @@ namespace PersonProject
 
         static void Main(string[] args)
         {
-            Person a = new Person("BEaTa", "NOWak", "1992-10-22", "92102201347", Sex.Woman);
-            Person b = new Person("JAn", "JanoWski", "1993-03-15", "92031507772", Sex.Man, "50594434");
+            TeamManager a= new TeamManager(10,"22-12-2021", "CEO","FRFR", "NIW NIW", "01-01-2005", "12312312311", Sex.Man, "505505505");
             a.ToString();
-            b.ToString();
-            Console.WriteLine(a.hoursLived(8));
+            
             Console.ReadKey();
         }
     }

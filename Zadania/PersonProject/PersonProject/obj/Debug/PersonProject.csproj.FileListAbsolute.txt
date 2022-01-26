@@ -12,3 +12,11 @@ C:\Users\majgier grzegorz\Documents\c#\Zadania\PersonProject\PersonProject\obj\D
 C:\Users\majgier grzegorz\Documents\c#\Zadania\PersonProject\PersonProject\obj\Debug\PersonProject.csproj.CoreCompileInputs.cache
 C:\Users\majgier grzegorz\Documents\c#\Zadania\PersonProject\PersonProject\obj\Debug\PersonProject.exe
 C:\Users\majgier grzegorz\Documents\c#\Zadania\PersonProject\PersonProject\obj\Debug\PersonProject.pdb
+C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\PersonProject\bin\Debug\PersonProject.exe.config
+C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\PersonProject\bin\Debug\PersonProject.exe
+C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\PersonProject\bin\Debug\PersonProject.pdb
+C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\PersonProject\obj\Debug\PersonProject.csproj.AssemblyReference.cache
+C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\PersonProject\obj\Debug\PersonProject.csproj.SuggestedBindingRedirects.cache
+C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\PersonProject\obj\Debug\PersonProject.csproj.CoreCompileInputs.cache
+C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\PersonProject\obj\Debug\PersonProject.exe
+C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\PersonProject\obj\Debug\PersonProject.pdb

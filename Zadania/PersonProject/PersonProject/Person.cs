@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonProject
 {
-    class Person
+     abstract class Person
     {
         //values
         private string name;
@@ -68,7 +68,7 @@ namespace PersonProject
         public Person(string name, string surname, string DateofBirth, string socialid, Sex sex )
         {
             setName(name, surname);
-            DateTime.TryParseExact(DateofBirth, new[] { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy" }, null, System.Globalization.DateTimeStyles.None, out birthDate);
+            DateTime.TryParseExact(DateofBirth, new[] { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy", "dd-MM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out birthDate);
             this.sex = sex;
             //            Console.WriteLine("Is Social ID correct: " + isSocialIdCorrect(socialid));
             if (!isSocialIdCorrect(socialid))
@@ -86,7 +86,7 @@ namespace PersonProject
         }
         new public void ToString()
         {
-            Console.WriteLine($"{Name} {Surname} ({Age()}) {birthDate} {SocialId} {sex}");
+            Console.Write($"{Name} {Surname} ({Age()}) {birthDate.ToShortDateString()} {SocialId} {sex} {phoneNum}");
         }
         //Functions
         public int Age()
@@ -114,34 +114,36 @@ namespace PersonProject
                      properMonth = (s.Month + 40).ToString();
                  return properMonth;
              };
-            if (si.Substring(0, 2) != birthDate.Year.ToString().Substring(2))
-            {
-                return false;
+          
+                if (si.Substring(0, 2) != birthDate.Year.ToString().Substring(2))
+                {
+                    return false;
+                }
+
+                if (si.Substring(2, 2) != monthID(birthDate))
+                {
+                    return false;
+                }
+
+                if (si.Substring(4, 2) != (birthDate.Day >= 10 ? birthDate.Day.ToString() : $"0{birthDate.Day}"))
+                {
+                    return false;
+                }
+                if (Convert.ToInt32(si.Substring(6, 2)) % 2 == 0 && this.sex == Sex.Woman)
+                {
+                    return false;
+                }
+                int controlNumber = 0;
+                for (int i = 0; i < 10; i++)
+                {
+                    controlNumber += (socialIdWeights[i] * int.Parse(si[i].ToString()) % 10);
+                }
+                if (int.Parse(si[10].ToString()) != (10 - (controlNumber % 10)) % 10)
+                {
+                    return false;
+                }
+                return true;
+          
             }
-            
-            if (si.Substring(2, 2) != monthID(birthDate))
-            {
-                return false;
-            }
-            
-            if (si.Substring(4, 2) != (birthDate.Day >= 10 ? birthDate.Day.ToString() : $"0{birthDate.Day}"))
-            {
-                return false;
-            }
-            if (Convert.ToInt32(si.Substring(6,2)) % 2 == 0 && this.sex == Sex.Woman)
-            {
-                return false;
-            }
-            int controlNumber = 0;
-            for(int i = 0; i < 10; i++)
-            {
-                controlNumber += (socialIdWeights[i] * int.Parse(si[i].ToString()) % 10);
-            }
-            if(int.Parse(si[10].ToString()) != (10 - (controlNumber%10))%10)
-            {
-                return false;
-            }
-            return true;
-        }
     }
 }
