@@ -75,10 +75,7 @@ namespace PersonProject
             {
                 Console.WriteLine("Wrong Social ID!");
             }
-            else
-            {
-                this.SocialId = socialid;
-            }
+            this.SocialId = socialid;
         }
         public Person(string name, string surname, string DateofBirth, string socialid, Sex sex,string phoneNum) : this(name, surname, DateofBirth, socialid, sex)
         {
@@ -86,9 +83,13 @@ namespace PersonProject
         }
         new public void ToString()
         {
-            Console.Write($"{Name} {Surname} ({Age()}) {birthDate.ToShortDateString()} {SocialId} {sex} {phoneNum}");
+            Console.WriteLine($"{Name} {Surname} ({Age()}) {birthDate.ToShortDateString()} {SocialId} {sex} {phoneNum}");
         }
         //Functions
+        public bool isSocialId(string socialid)
+        {
+            return socialid == this.SocialId;
+        }
         public int Age()
         {
             DateTime date = new DateTime();

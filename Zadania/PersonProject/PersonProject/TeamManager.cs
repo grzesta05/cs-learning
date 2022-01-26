@@ -20,7 +20,7 @@ namespace PersonProject
         new public void ToString()
         {
             base.ToString();
-            Console.WriteLine(" " + this.signingTime.ToShortDateString() + " " + this.function + " " + experience);
+            Console.Write(" " + this.signingTime.ToShortDateString() + " " + this.function + " " + experience);
         }
         
     }

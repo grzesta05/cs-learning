@@ -18,8 +18,14 @@ namespace PersonProject
         static void Main(string[] args)
         {
             TeamManager a= new TeamManager(10,"22-12-2021", "CEO","FRFR", "NIW NIW", "01-01-2005", "12312312311", Sex.Man, "505505505");
-            a.ToString();
-            
+            Team it = new Team("Grupa IT", a);
+            for(int i=0;i<10;i++)
+            {
+                TeamMember member = new TeamMember("01-01-2020", "programmer", "Adam", "Rywryw", "02-03-2000", "12312312311", Sex.Man, "123123123");
+                it.addMember(member);
+            }
+            Console.WriteLine(it.isMember("12312312311"));
+            Console.WriteLine(it.ToString());
             Console.ReadKey();
         }
     }
