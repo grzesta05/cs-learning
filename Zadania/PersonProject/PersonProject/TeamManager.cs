@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonProject
 {
-    sealed class TeamManager : Person 
+    sealed class TeamManager : Person, ICloneable 
     {
         public int experience;
         public DateTime signingTime;
@@ -22,6 +22,11 @@ namespace PersonProject
             base.ToString();
             Console.Write(" " + this.signingTime.ToShortDateString() + " " + this.function + " " + experience);
         }
-        
+        public Object Clone()
+        {
+            TeamManager a = new TeamManager(experience, signingTime.ToString(), function, Name, Surname, birthDate.ToString(), SocialId, sex, phoneNum);
+            return a;
+        }
+
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonProject
 {
-    class Team
+    class Team : ICloneable
     {
         private int membersCount;
         private string name;
@@ -14,7 +14,7 @@ namespace PersonProject
         private List<TeamMember> members;
 
         //Constructors, setters and getters
-        public Team() 
+        public Team()
         {
             membersCount = 0;
             name = null;
@@ -24,7 +24,7 @@ namespace PersonProject
 
         public Team(string name, TeamManager manager) : this()
         {
-            
+
             this.name = name;
             this.manager = manager;
         }
@@ -46,12 +46,12 @@ namespace PersonProject
         }
         public override string ToString()
         {
-           StringBuilder sb = new StringBuilder();
+            StringBuilder sb = new StringBuilder();
             //Team name, manager and members count
             sb.AppendLine($"Team Name: {name}");
             sb.AppendLine($"Manager: {manager.Name} {manager.Surname}");
             sb.AppendLine($"Members count: {membersCount}");
-            foreach(TeamMember member in members)
+            foreach (TeamMember member in members)
             {
                 sb.AppendLine($"{member.Name} {member.Surname}");
             }
@@ -59,9 +59,9 @@ namespace PersonProject
         }
         public void deleteMember(string socialid)
         {
-            foreach(TeamMember member in members)
+            foreach (TeamMember member in members)
             {
-                if(member.isSocialId(socialid))
+                if (member.isSocialId(socialid))
                 {
                     membersCount--;
                     members.Remove(member);
@@ -103,9 +103,9 @@ namespace PersonProject
         }
         public bool isMember(string socialid)
         {
-            foreach(TeamMember member in members)
+            foreach (TeamMember member in members)
             {
-                if(member.isSocialId(socialid))
+                if (member.isSocialId(socialid))
                     return true;
             }
             return false;
@@ -118,6 +118,35 @@ namespace PersonProject
                     return true;
             }
             return false;
+        }
+        public Object Clone()
+        {
+            Team temp = new Team(name, manager);
+            for (int i = 0; i < membersCount; i++)
+            {
+                temp.addMember(members[i]);
+            }
+            temp.membersCount = membersCount;
+            return temp;
+        }
+        public void Sort()
+        {
+            members.Sort();
+        }
+        public void SortBySocialID()
+        {
+            members.Sort(new SocialIDCompare());
+        }
+        public class SocialIDCompare : IComparer<TeamMember>
+        {
+            public int Compare(TeamMember a, TeamMember b)
+            {
+                return a.SocialId.CompareTo(b.SocialId);
+            }
+        }
+        public bool IsMember(TeamMember member)
+        {
+            return member.Equals(this);
         }
     }
 }

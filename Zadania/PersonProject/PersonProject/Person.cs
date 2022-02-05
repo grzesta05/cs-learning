@@ -6,22 +6,23 @@ using System.Threading.Tasks;
 
 namespace PersonProject
 {
-     abstract class Person
+    abstract class Person : IEquatable<Person>
     {
         //values
         private string name;
         private string surname;
         public string phoneNum { get; set; }
         //Surname and name setters and getters
-        public string Surname { 
-            get 
+        public string Surname
+        {
+            get
             {
                 return surname;
             }
             set
             {
                 value = value.ToLower();
-                char [] i = value.ToCharArray();
+                char[] i = value.ToCharArray();
                 i[0] = Char.ToUpper(i[0]);
                 surname = new string(i);
 
@@ -43,9 +44,9 @@ namespace PersonProject
         }
 
         //
-        private DateTime birthDate;
-        private string SocialId;
-        private Sex sex;
+        protected DateTime birthDate;
+        public string SocialId;
+        protected Sex sex;
 
         //Constructors
         public Person()
@@ -65,7 +66,7 @@ namespace PersonProject
         {
             setName(name, surname);
         }
-        public Person(string name, string surname, string DateofBirth, string socialid, Sex sex )
+        public Person(string name, string surname, string DateofBirth, string socialid, Sex sex)
         {
             setName(name, surname);
             DateTime.TryParseExact(DateofBirth, new[] { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy", "dd-MM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out birthDate);
@@ -77,7 +78,7 @@ namespace PersonProject
             }
             this.SocialId = socialid;
         }
-        public Person(string name, string surname, string DateofBirth, string socialid, Sex sex,string phoneNum) : this(name, surname, DateofBirth, socialid, sex)
+        public Person(string name, string surname, string DateofBirth, string socialid, Sex sex, string phoneNum) : this(name, surname, DateofBirth, socialid, sex)
         {
             this.phoneNum = phoneNum;
         }
@@ -98,7 +99,7 @@ namespace PersonProject
         }
         public int hoursLived(int a)
         {
-           TimeSpan i = new TimeSpan(DateTime.Now.Ticks - birthDate.Ticks);
+            TimeSpan i = new TimeSpan(DateTime.Now.Ticks - birthDate.Ticks);
             return Convert.ToInt32(i.TotalHours - a);
         }
         public bool isSocialIdCorrect(string si)
@@ -115,36 +116,47 @@ namespace PersonProject
                      properMonth = (s.Month + 40).ToString();
                  return properMonth;
              };
-          
-                if (si.Substring(0, 2) != birthDate.Year.ToString().Substring(2))
-                {
-                    return false;
-                }
 
-                if (si.Substring(2, 2) != monthID(birthDate))
-                {
-                    return false;
-                }
-
-                if (si.Substring(4, 2) != (birthDate.Day >= 10 ? birthDate.Day.ToString() : $"0{birthDate.Day}"))
-                {
-                    return false;
-                }
-                if (Convert.ToInt32(si.Substring(6, 2)) % 2 == 0 && this.sex == Sex.Woman)
-                {
-                    return false;
-                }
-                int controlNumber = 0;
-                for (int i = 0; i < 10; i++)
-                {
-                    controlNumber += (socialIdWeights[i] * int.Parse(si[i].ToString()) % 10);
-                }
-                if (int.Parse(si[10].ToString()) != (10 - (controlNumber % 10)) % 10)
-                {
-                    return false;
-                }
-                return true;
-          
+            if (si.Substring(0, 2) != birthDate.Year.ToString().Substring(2))
+            {
+                return false;
             }
+
+            if (si.Substring(2, 2) != monthID(birthDate))
+            {
+                return false;
+            }
+
+            if (si.Substring(4, 2) != (birthDate.Day >= 10 ? birthDate.Day.ToString() : $"0{birthDate.Day}"))
+            {
+                return false;
+            }
+            if (Convert.ToInt32(si.Substring(6, 2)) % 2 == 0 && this.sex == Sex.Woman)
+            {
+                return false;
+            }
+            int controlNumber = 0;
+            for (int i = 0; i < 10; i++)
+            {
+                controlNumber += (socialIdWeights[i] * int.Parse(si[i].ToString()) % 10);
+            }
+            if (int.Parse(si[10].ToString()) != (10 - (controlNumber % 10)) % 10)
+            {
+                return false;
+            }
+            return true;
+
+        }
+        public bool Equals(Person a)
+        {
+            if (this.SocialId == a.SocialId)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
     }
 }

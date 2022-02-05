@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonProject
 {
-    sealed class TeamMember : Person
+    sealed class TeamMember : Person, ICloneable, IComparable<TeamMember>
     {
         public DateTime signingTime;
         public string function;
@@ -19,6 +19,22 @@ namespace PersonProject
         {
             base.ToString();
             Console.Write(" " + this.signingTime.ToShortDateString() + " " + this.function);    
+        }
+        public Object Clone()
+        {
+            TeamMember a = new TeamMember(signingTime.ToString(), function, Name, Surname, birthDate.ToString(), SocialId, sex, phoneNum);
+            return a;
+        }
+        public int CompareTo(TeamMember a)
+        {
+            if((int)this.Surname[0] != (int)a.Surname[0])
+            {
+                return Comparer<string>.Default.Compare(this.Surname, a.Surname);
+            }
+            else
+            {
+                return Comparer<string>.Default.Compare(this.Name, a.Name);
+            }
         }
     }
 }
