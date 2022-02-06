@@ -1,17 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
+using System.Collections;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Runtime.Serialization;
+using System.Xml.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 
 namespace PersonProject
 {
-    class Team : ICloneable
+    interface ISaved
     {
-        private int membersCount;
-        private string name;
-        private TeamManager manager;
-        private List<TeamMember> members;
+        void SaveBinary(string name);
+        void ImportBinary(string name);
+
+    }
+    [Serializable()]
+    sealed public class Team : ICloneable, ISaved
+    {
+        public int membersCount;
+        public string name;
+        public TeamManager manager;
+        public List<TeamMember> members;
 
         //Constructors, setters and getters
         public Team()
@@ -21,7 +33,14 @@ namespace PersonProject
             manager = null;
             members = new List<TeamMember>();
         }
+        public void Initialize(Team a)
+        {
+            membersCount = a.membersCount;
+            name = a.name;
+            manager = a.manager;
+            members = a.members;
 
+        }
         public Team(string name, TeamManager manager) : this()
         {
 
@@ -147,6 +166,52 @@ namespace PersonProject
         public bool IsMember(TeamMember member)
         {
             return member.Equals(this);
+        }
+
+        public void SaveBinary(string name)
+        {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            FileStream file = new FileStream(name, FileMode.Create);
+            try
+            {
+                binaryFormatter.Serialize(file, this);
+            }catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+        }
+        
+        public void ImportBinary(string name)
+        {
+            BinaryFormatter binaryFormatter = new BinaryFormatter();
+            FileStream file = new FileStream(name, FileMode.Open);
+            try
+            {
+                Team a = (Team) binaryFormatter.Deserialize(file);
+                Initialize(a);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                
+            }
+        }
+        public static Team ImportXML(string name)
+        {
+            var XML = new XmlSerializer(typeof(Team));
+            using (var file = new FileStream(name, FileMode.Open))
+            {
+                return (Team)XML.Deserialize(file);
+            }
+        }
+
+        public static void SaveXML(string name, Team a)
+        {
+            using (var stream = new FileStream(name, FileMode.Create))
+            {
+                var XML = new XmlSerializer(typeof(Team));
+                XML.Serialize(stream, a);
+            }
         }
     }
 }

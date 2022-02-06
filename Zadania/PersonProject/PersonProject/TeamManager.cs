@@ -6,11 +6,16 @@ using System.Threading.Tasks;
 
 namespace PersonProject
 {
-    sealed class TeamManager : Person, ICloneable 
+    [Serializable()]
+    sealed public class TeamManager : Person, ICloneable 
     {
         public int experience;
         public DateTime signingTime;
         public string function;
+      public TeamManager()
+        {
+
+        }
         public TeamManager(int experience, string signingTime, string function, string name, string surname, string DateOfBirth, string socialid, Sex sex, string phoneNum) : base(name, surname, DateOfBirth, socialid, sex, phoneNum)
         {
             DateTime.TryParseExact(signingTime, new[] { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy", "dd-MM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out this.signingTime);

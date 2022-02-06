@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace PersonProject
 {
-    abstract class Person : IEquatable<Person>
+    [Serializable()]
+    abstract public class Person : IEquatable<Person>
     {
         //values
         private string name;
@@ -44,9 +45,9 @@ namespace PersonProject
         }
 
         //
-        protected DateTime birthDate;
+        public DateTime birthDate;
         public string SocialId;
-        protected Sex sex;
+        public Sex sex;
 
         //Constructors
         public Person()
