@@ -54,7 +54,7 @@ namespace PersonProject
         {
             birthDate = DateTime.Now;
             SocialId = "00000000000";
-            name = "Przemek";
+            Name = "Przemek";
             surname = "Generyczny";
             sex = Sex.Other;
         }
@@ -83,9 +83,9 @@ namespace PersonProject
         {
             this.phoneNum = phoneNum;
         }
-        new public void ToString()
+        public override string ToString()
         {
-            Console.WriteLine($"{Name} {Surname} ({Age()}) {birthDate.ToShortDateString()} {SocialId} {sex} {phoneNum}");
+            return $"{Name} {Surname} ({Age()}) {birthDate.ToShortDateString()} {SocialId} {sex} {phoneNum}";
         }
         //Functions
         public bool isSocialId(string socialid)

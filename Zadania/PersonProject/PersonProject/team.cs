@@ -145,7 +145,6 @@ namespace PersonProject
             {
                 temp.addMember(members[i]);
             }
-            temp.membersCount = membersCount;
             return temp;
         }
         public void Sort()

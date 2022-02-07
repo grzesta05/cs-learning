@@ -21,12 +21,10 @@ namespace PersonProject
             Team it = new Team("Grupa IT2", a);
             for(int i=0;i<10;i++)
             {
-                TeamMember member = new TeamMember("01-01-2020", "programmer", $"Adam", "Rwryw", "02-03-2000", $"{i}1231{i}312311", Sex.Man, "123123123");
-                TeamMember member1 = new TeamMember("01-01-2020", "programmer", $"BAdam", "Aywryw", "02-03-2000", "12312312311", Sex.Man, "123123123");
-                TeamMember member2 = new TeamMember("01-01-2020", "programmer", $"Sadam", "Rywryw", "02-03-2000", "12312312311", Sex.Man, "123123123");
+                TeamMember member = new TeamMember("01-01-2020", "programmer", "Adam", "Rwryw", "02-03-2000", $"{i}1231{i}312311", Sex.Man, "123123123");
+                
                 it.addMember(member);
-                it.addMember(member1);
-                it.addMember(member2);
+              
             }
             Team it2 = (Team)it.Clone();
             if(ReferenceEquals(it, it2))
@@ -42,9 +40,9 @@ namespace PersonProject
             Team s =(Team) it.Clone();
             Team.SaveXML("serialize.xml", s);
 
-
             Team f = Team.ImportXML("serialize.xml");
-            f.members[0].ToString();
+
+            Console.WriteLine(f.members[0]);
             Console.ReadKey();
         }
 

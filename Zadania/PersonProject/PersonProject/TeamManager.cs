@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PersonProject
 {
     [Serializable()]
-    sealed public class TeamManager : Person, ICloneable 
+    public class TeamManager : Person, ICloneable 
     {
         public int experience;
         public DateTime signingTime;
@@ -22,10 +22,10 @@ namespace PersonProject
             this.function = function;
             this.experience = experience;
         }
-        new public void ToString()
+        public override string ToString()
         {
-            base.ToString();
-            Console.Write(" " + this.signingTime.ToShortDateString() + " " + this.function + " " + experience);
+            return (base.ToString() + " " + this.signingTime.ToShortDateString() + " " + this.function + " " + experience);
+            
         }
         public Object Clone()
         {

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace PersonProject
 {
     [Serializable()]
-    sealed public class TeamMember : Person, ICloneable, IComparable<TeamMember>
+    public class TeamMember : Person, ICloneable, IComparable<TeamMember>
     {
         public DateTime signingTime;
         public string function;
@@ -21,10 +21,9 @@ namespace PersonProject
             DateTime.TryParseExact(signingTime, new[] { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy", "dd-MM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out this.signingTime);
             this.function = function;
         }
-        new public void ToString()
+        public override string ToString()
         {
-            base.ToString();
-            Console.Write(" " + this.signingTime.ToShortDateString() + " " + this.function);    
+            return base.ToString() + (" " + this.signingTime.ToShortDateString() + " " + this.function);    
         }
         public Object Clone()
         {
