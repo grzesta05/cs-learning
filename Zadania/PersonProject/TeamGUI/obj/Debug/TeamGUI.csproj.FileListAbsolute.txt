@@ -18,3 +18,5 @@ C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\TeamGUI\bin\Debug\Perso
 C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\TeamGUI\bin\Debug\PersonProject.pdb
 C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\TeamGUI\bin\Debug\PersonProject.exe.config
 C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\TeamGUI\obj\Debug\TeamGUI.csproj.CopyComplete
+C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\TeamGUI\obj\Debug\AddPersonWindow.g.cs
+C:\Users\grzes\Documents\GitHub\c-\Zadania\PersonProject\TeamGUI\obj\Debug\AddPersonWindow.baml

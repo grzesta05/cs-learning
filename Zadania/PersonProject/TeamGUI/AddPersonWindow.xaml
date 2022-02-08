@@ -5,8 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:TeamGUI"
         mc:Ignorable="d"
-        Title="AddPersonWindow" Height="450" Width="800">
+        Title="AddPersonWindow" Height="450" Width="800" FontSize="16px">
     <Grid>
-        
+        <Label Content="Social ID" HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" />
+        <Label Content="Name" HorizontalAlignment="Left" Margin="50,70,0,0" VerticalAlignment="Top"/>
+        <Label Content="Surname" HorizontalAlignment="Left" Margin="50,110,0,0" VerticalAlignment="Top"/>
+        <Label Content="Birth Date" HorizontalAlignment="Left" Margin="50,150,0,0" VerticalAlignment="Top"/>
+        <Label Content="Gender" HorizontalAlignment="Left" Margin="50,190,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="tbSocialID" HorizontalAlignment="center" Margin="0,34,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500"/>
+        <TextBox x:Name="tbName" HorizontalAlignment="center" Margin="0,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500"/>
+        <TextBox x:Name="tbSurname" HorizontalAlignment="center" Margin="0,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500"/>
+        <TextBox x:Name="tbBirthDate" HorizontalAlignment="center" Margin="0,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500" />
+        <ComboBox x:Name="cbGender" HorizontalAlignment="center" Margin="0,194,0,0" VerticalAlignment="Top" Width="500">
+            <TextBlock Text="Woman"></TextBlock>
+            <TextBlock Text="Man"></TextBlock>
+            <TextBlock Text="Other"></TextBlock>
+        </ComboBox>
+        <Button x:Name="bAccept" Content="Accept" HorizontalAlignment="Left" Margin="50,254,0,0" VerticalAlignment="Top" Width="300" Click="AcceptOnClick"/>
+        <Button x:Name="bCancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,254,50,0" VerticalAlignment="Top" Width="300"/>
     </Grid>
 </Window>

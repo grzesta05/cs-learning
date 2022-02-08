@@ -45,7 +45,9 @@ namespace TeamGUI
 
         private void bAddMember_Click(object sender, RoutedEventArgs e)
         {
-
+            TeamMember teamMember = new TeamMember();
+            AddPersonWindow add = new AddPersonWindow();
+            add.ShowDialog();
         }
 
         private void tbName_TextChanged(object sender, TextChangedEventArgs e)
