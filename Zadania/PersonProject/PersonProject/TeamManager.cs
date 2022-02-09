@@ -11,25 +11,24 @@ namespace PersonProject
     {
         public int experience;
         public DateTime signingTime;
-        public string function;
+        
       public TeamManager()
         {
 
         }
-        public TeamManager(int experience, string signingTime, string function, string name, string surname, string DateOfBirth, string socialid, Sex sex, string phoneNum) : base(name, surname, DateOfBirth, socialid, sex, phoneNum)
+        public TeamManager(int experience, string signingTime, string name, string surname, string DateOfBirth, string socialid, Sex sex, string phoneNum) : base(name, surname, DateOfBirth, socialid, sex, phoneNum)
         {
             DateTime.TryParseExact(signingTime, new[] { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy", "dd-MM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out this.signingTime);
-            this.function = function;
             this.experience = experience;
         }
         public override string ToString()
         {
-            return (base.ToString() + " " + this.signingTime.ToShortDateString() + " " + this.function + " " + experience);
+            return (base.ToString() + " " + this.signingTime.ToShortDateString() + " " + experience);
             
         }
         public Object Clone()
         {
-            TeamManager a = new TeamManager(experience, signingTime.ToString(), function, Name, Surname, birthDate.ToString(), SocialId, sex, phoneNum);
+            TeamManager a = new TeamManager(experience, signingTime.ToString(), Name, Surname, birthDate.ToString(), SocialId, sex, phoneNum);
             return a;
         }
 

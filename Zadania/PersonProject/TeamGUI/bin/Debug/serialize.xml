@@ -1,130 +1,128 @@
 <?xml version="1.0"?>
 <Team xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <membersCount>10</membersCount>
-  <name>Grupa IT2</name>
+  <name>Grupa 1</name>
   <manager>
-    <birthDate>2005-01-01T00:00:00</birthDate>
-    <SocialId>12312312311</SocialId>
-    <sex>Man</sex>
-    <phoneNum>505505505</phoneNum>
-    <Surname>Niw niw</Surname>
-    <Name>Frfr</Name>
+    <birthDate>1990-01-01T00:00:00</birthDate>
+    <SocialId>12312312312</SocialId>
+    <sex>Other</sex>
+    <phoneNum>123123123</phoneNum>
+    <Surname>1</Surname>
+    <Name>Manager</Name>
     <experience>10</experience>
-    <signingTime>2021-12-22T00:00:00</signingTime>
-    <function>CEO</function>
+    <signingTime>0001-01-01T00:00:00</signingTime>
   </manager>
   <members>
     <TeamMember>
-      <birthDate>2000-03-02T00:00:00</birthDate>
-      <SocialId>012310312311</SocialId>
-      <sex>Man</sex>
+      <birthDate>1980-01-01T00:00:00</birthDate>
+      <SocialId>12312312310</SocialId>
+      <sex>Other</sex>
       <phoneNum>123123123</phoneNum>
-      <Surname>Rwryw</Surname>
-      <Name>Adam</Name>
-      <signingTime>2020-01-01T00:00:00</signingTime>
-      <function>programmer</function>
+      <Surname>Surname</Surname>
+      <Name>Person1</Name>
+      <signingTime>0001-01-01T00:00:00</signingTime>
+      <function>Worker</function>
     </TeamMember>
     <TeamMember>
-      <birthDate>2000-03-02T00:00:00</birthDate>
-      <SocialId>112311312311</SocialId>
-      <sex>Man</sex>
+      <birthDate>1980-01-01T00:00:00</birthDate>
+      <SocialId>12312312311</SocialId>
+      <sex>Other</sex>
       <phoneNum>123123123</phoneNum>
-      <Surname>Rwryw</Surname>
-      <Name>Adam</Name>
-      <signingTime>2020-01-01T00:00:00</signingTime>
-      <function>programmer</function>
+      <Surname>Surname</Surname>
+      <Name>Person2</Name>
+      <signingTime>0001-01-01T00:00:00</signingTime>
+      <function>Worker</function>
     </TeamMember>
     <TeamMember>
-      <birthDate>2000-03-02T00:00:00</birthDate>
-      <SocialId>212312312311</SocialId>
-      <sex>Man</sex>
+      <birthDate>1980-01-01T00:00:00</birthDate>
+      <SocialId>12312312312</SocialId>
+      <sex>Other</sex>
       <phoneNum>123123123</phoneNum>
-      <Surname>Rwryw</Surname>
-      <Name>Adam</Name>
-      <signingTime>2020-01-01T00:00:00</signingTime>
-      <function>programmer</function>
+      <Surname>Surname</Surname>
+      <Name>Person3</Name>
+      <signingTime>0001-01-01T00:00:00</signingTime>
+      <function>Worker</function>
     </TeamMember>
     <TeamMember>
-      <birthDate>2000-03-02T00:00:00</birthDate>
-      <SocialId>312313312311</SocialId>
-      <sex>Man</sex>
+      <birthDate>1980-01-01T00:00:00</birthDate>
+      <SocialId>12312312313</SocialId>
+      <sex>Other</sex>
       <phoneNum>123123123</phoneNum>
-      <Surname>Rwryw</Surname>
-      <Name>Adam</Name>
-      <signingTime>2020-01-01T00:00:00</signingTime>
-      <function>programmer</function>
+      <Surname>Surname</Surname>
+      <Name>Person4</Name>
+      <signingTime>0001-01-01T00:00:00</signingTime>
+      <function>Worker</function>
     </TeamMember>
     <TeamMember>
-      <birthDate>2000-03-02T00:00:00</birthDate>
-      <SocialId>412314312311</SocialId>
-      <sex>Man</sex>
+      <birthDate>1980-01-01T00:00:00</birthDate>
+      <SocialId>12312312314</SocialId>
+      <sex>Other</sex>
       <phoneNum>123123123</phoneNum>
-      <Surname>Rwryw</Surname>
-      <Name>Adam</Name>
-      <signingTime>2020-01-01T00:00:00</signingTime>
-      <function>programmer</function>
+      <Surname>Surname</Surname>
+      <Name>Person5</Name>
+      <signingTime>0001-01-01T00:00:00</signingTime>
+      <function>Worker</function>
     </TeamMember>
     <TeamMember>
-      <birthDate>2000-03-02T00:00:00</birthDate>
-      <SocialId>512315312311</SocialId>
-      <sex>Man</sex>
+      <birthDate>1980-01-01T00:00:00</birthDate>
+      <SocialId>12312312315</SocialId>
+      <sex>Other</sex>
       <phoneNum>123123123</phoneNum>
-      <Surname>Rwryw</Surname>
-      <Name>Adam</Name>
-      <signingTime>2020-01-01T00:00:00</signingTime>
-      <function>programmer</function>
+      <Surname>Surname</Surname>
+      <Name>Person6</Name>
+      <signingTime>0001-01-01T00:00:00</signingTime>
+      <function>Worker</function>
     </TeamMember>
     <TeamMember>
-      <birthDate>2000-03-02T00:00:00</birthDate>
-      <SocialId>612316312311</SocialId>
-      <sex>Man</sex>
+      <birthDate>1980-01-01T00:00:00</birthDate>
+      <SocialId>12312312316</SocialId>
+      <sex>Other</sex>
       <phoneNum>123123123</phoneNum>
-      <Surname>Rwryw</Surname>
-      <Name>Adam</Name>
-      <signingTime>2020-01-01T00:00:00</signingTime>
-      <function>programmer</function>
+      <Surname>Surname</Surname>
+      <Name>Person7</Name>
+      <signingTime>0001-01-01T00:00:00</signingTime>
+      <function>Worker</function>
     </TeamMember>
     <TeamMember>
-      <birthDate>2000-03-02T00:00:00</birthDate>
-      <SocialId>712317312311</SocialId>
-      <sex>Man</sex>
+      <birthDate>1980-01-01T00:00:00</birthDate>
+      <SocialId>12312312317</SocialId>
+      <sex>Other</sex>
       <phoneNum>123123123</phoneNum>
-      <Surname>Rwryw</Surname>
-      <Name>Adam</Name>
-      <signingTime>2020-01-01T00:00:00</signingTime>
-      <function>programmer</function>
+      <Surname>Surname</Surname>
+      <Name>Person8</Name>
+      <signingTime>0001-01-01T00:00:00</signingTime>
+      <function>Worker</function>
     </TeamMember>
     <TeamMember>
-      <birthDate>2000-03-02T00:00:00</birthDate>
-      <SocialId>812318312311</SocialId>
-      <sex>Man</sex>
+      <birthDate>1980-01-01T00:00:00</birthDate>
+      <SocialId>12312312318</SocialId>
+      <sex>Other</sex>
       <phoneNum>123123123</phoneNum>
-      <Surname>Rwryw</Surname>
-      <Name>Adam</Name>
-      <signingTime>2020-01-01T00:00:00</signingTime>
-      <function>programmer</function>
+      <Surname>Surname</Surname>
+      <Name>Person9</Name>
+      <signingTime>0001-01-01T00:00:00</signingTime>
+      <function>Worker</function>
     </TeamMember>
     <TeamMember>
-      <birthDate>2000-03-02T00:00:00</birthDate>
-      <SocialId>912319312311</SocialId>
-      <sex>Man</sex>
+      <birthDate>1980-01-01T00:00:00</birthDate>
+      <SocialId>12312312319</SocialId>
+      <sex>Other</sex>
       <phoneNum>123123123</phoneNum>
-      <Surname>Rwryw</Surname>
-      <Name>Adam</Name>
-      <signingTime>2020-01-01T00:00:00</signingTime>
-      <function>programmer</function>
+      <Surname>Surname</Surname>
+      <Name>Person10</Name>
+      <signingTime>0001-01-01T00:00:00</signingTime>
+      <function>Worker</function>
     </TeamMember>
   </members>
-  <Name>Grupa IT2</Name>
+  <Name>Grupa 1</Name>
   <Manager>
-    <birthDate>2005-01-01T00:00:00</birthDate>
-    <SocialId>12312312311</SocialId>
-    <sex>Man</sex>
-    <phoneNum>505505505</phoneNum>
-    <Surname>Niw niw</Surname>
-    <Name>Frfr</Name>
+    <birthDate>1990-01-01T00:00:00</birthDate>
+    <SocialId>12312312312</SocialId>
+    <sex>Other</sex>
+    <phoneNum>123123123</phoneNum>
+    <Surname>1</Surname>
+    <Name>Manager</Name>
     <experience>10</experience>
-    <signingTime>2021-12-22T00:00:00</signingTime>
-    <function>CEO</function>
+    <signingTime>0001-01-01T00:00:00</signingTime>
   </Manager>
 </Team>

@@ -30,7 +30,7 @@ namespace PersonProject
         {
             membersCount = 0;
             name = null;
-            manager = null;
+            manager = new TeamManager();
             members = new List<TeamMember>();
         }
         public void Initialize(Team a)
@@ -198,7 +198,7 @@ namespace PersonProject
         public static Team ImportXML(string name)
         {
             var XML = new XmlSerializer(typeof(Team));
-            using (var file = new FileStream(name, FileMode.Open))
+            using (var file = new FileStream(name+".xml", FileMode.Open))
             {
                 return (Team)XML.Deserialize(file);
             }
@@ -206,7 +206,7 @@ namespace PersonProject
 
         public static void SaveXML(string name, Team a)
         {
-            using (var stream = new FileStream(name, FileMode.Create))
+            using (var stream = new FileStream(name+".xml", FileMode.Create))
             {
                 var XML = new XmlSerializer(typeof(Team));
                 XML.Serialize(stream, a);

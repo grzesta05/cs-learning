@@ -16,12 +16,19 @@
         <TextBox x:Name="tbName" HorizontalAlignment="center" Margin="0,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500"/>
         <TextBox x:Name="tbSurname" HorizontalAlignment="center" Margin="0,114,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500"/>
         <TextBox x:Name="tbBirthDate" HorizontalAlignment="center" Margin="0,154,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500" />
+
+
+        <Label Content="Function" Name="lbFunction" HorizontalAlignment="Left" Margin="50,230,0,0" VerticalAlignment="Top"  Visibility="Hidden"/>
+        <Label Name="lbExperience" Content="Experience" HorizontalAlignment="Left" Margin="50,230,0,0" VerticalAlignment="Top"  Visibility="Hidden"/>
+        <TextBox x:Name="tbExperience" HorizontalAlignment="center" Margin="0,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500" Visibility="Hidden"/>
+        <TextBox x:Name="tbFunction" HorizontalAlignment="center" Margin="0,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500" Visibility="Hidden"/>
+        
         <ComboBox x:Name="cbGender" HorizontalAlignment="center" Margin="0,194,0,0" VerticalAlignment="Top" Width="500">
             <TextBlock Text="Woman"></TextBlock>
             <TextBlock Text="Man"></TextBlock>
             <TextBlock Text="Other"></TextBlock>
         </ComboBox>
-        <Button x:Name="bAccept" Content="Accept" HorizontalAlignment="Left" Margin="50,254,0,0" VerticalAlignment="Top" Width="300" Click="AcceptOnClick"/>
-        <Button x:Name="bCancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,254,50,0" VerticalAlignment="Top" Width="300"/>
+        <Button x:Name="bAccept" Content="Accept" HorizontalAlignment="Left" Margin="50,361,0,0" VerticalAlignment="Top" Width="300" Click="bAccept_Click" />
+        <Button x:Name="bCancel" Content="Cancel" HorizontalAlignment="Right" Margin="0,361,57,0" VerticalAlignment="Top" Width="300" Click="bCancel_Click"/>
     </Grid>
 </Window>

@@ -17,33 +17,14 @@ namespace PersonProject
 
         static void Main(string[] args)
         {
-            TeamManager a= new TeamManager(10,"22-12-2021", "CEO","FRFR", "NIW NIW", "01-01-2005", "12312312311", Sex.Man, "505505505");
-            Team it = new Team("Grupa IT2", a);
-            for(int i=0;i<10;i++)
+            TeamManager teamManager = new TeamManager(10,"01-sty-2012","Manager","1", "01-sty-1990", "12312312312", Sex.Other, "123123123");
+            Team team = new Team("Grupa 1", teamManager);
+            for(int i = 0; i < 10; i++)
             {
-                TeamMember member = new TeamMember("01-01-2020", "programmer", "Adam", "Rwryw", "02-03-2000", $"{i}1231{i}312311", Sex.Man, "123123123");
-                
-                it.addMember(member);
-              
+                TeamMember member = new TeamMember("01-sty-2000", "Worker", $"Person{i+1}","Surname","01-sty-1980", $"1231231231{i}",Sex.Other, "123123123");
+                team.addMember(member);
             }
-            Team it2 = (Team)it.Clone();
-            if(ReferenceEquals(it, it2))
-            {
-                Console.WriteLine("Fail");
-            }
-            else
-            {
-                Console.WriteLine("Success");
-            }
-            it.SortBySocialID();
-            Console.WriteLine(it.ToString());
-            Team s =(Team) it.Clone();
-            Team.SaveXML("serialize.xml", s);
-
-            Team f = Team.ImportXML("serialize.xml");
-
-            Console.WriteLine(f.members[0]);
-            Console.ReadKey();
+            Team.SaveXML("serialize", team);
         }
 
     }

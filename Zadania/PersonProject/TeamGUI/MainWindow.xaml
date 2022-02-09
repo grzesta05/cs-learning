@@ -7,18 +7,48 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800"
         ResizeMode="NoResize"
+        Closing="MenuClose_Click"
+       
         >
     <Grid>
+        <DockPanel Grid.ColumnSpan="3">
+            <Menu DockPanel.Dock="Top">
+                <MenuItem Header="_Plik">
+                    <MenuItem Header="_Otwórz" Click="MenuOpen_Click"/>
+                    <MenuItem Header="_Zapisz" Click="MenuZapisz_Click"/>
+                    <MenuItem Header="_Wyjdź"  Click="MenuClose_Click"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel>
+                <StackPanel.Background>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FFFF8686" Offset="1"/>
+                        <GradientStop Color="#FFFFDEDE" Offset="0.5"/>
+                        <GradientStop Color="#FFFAFAFA" Offset="0"/>
+                    </LinearGradientBrush>
+                </StackPanel.Background>
+            </StackPanel>
+        </DockPanel>
+        
+        <!--Controls and labels-->
         <Label x:Name="lbName" Content="Name" HorizontalAlignment="Left" Margin="16,50,0,0" VerticalAlignment="Top" Width="80px" Height="30px" FontSize="16px" />
-        <TextBox HorizontalAlignment="Left" Margin="130,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="585" Height="30px" FontSize="16px" x:Name="tbName" ToolTip="Name of the team" TextChanged="tbName_TextChanged"/>
+        <TextBox HorizontalAlignment="Left" Margin="130,50,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="585" Height="30px" FontSize="16px" x:Name="tbName" ToolTip="Name of the team" />
         <Label x:Name="lbTeamManager" Content="Team Manager" HorizontalAlignment="Left" Margin="15,85,0,0" VerticalAlignment="Top" FontSize="16px" Width="115" />
-        <TextBox x:Name="tbTeamManager" HorizontalAlignment="Left" Margin="130,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500" FontSize="16px" Height="30px" ToolTip="Choose team manager"/>
+        <TextBox IsEnabled="False" x:Name="tbTeamManager" HorizontalAlignment="Left" Margin="130,86,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="500" FontSize="16px" Height="30px" ToolTip="Choose team manager"/>
 
-        <ListBox x:Name="lbMembersView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="130,137,85,50" SelectionChanged="lbMembersView_SelectionChanged"/>
+        <ListBox x:Name="lbMembersView" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="130,137,85,50">
+            <ListBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFFFD3D3"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </ListBox.Background>
+        </ListBox>
 
         <Button x:Name="bTeamManager" Content="Change" HorizontalAlignment="Left" Margin="635,86,0,0" VerticalAlignment="Top" FontSize="16px"  Height="30px" Width="80" Click="bTeamManager_Click"/>
         <Button x:Name="bAddMember" Content="Add" HorizontalAlignment="Left" Margin="35,137,0,0" VerticalAlignment="Top" FontSize="16px"  Height="30px" Width="80" Click="bAddMember_Click"/>
         <Button x:Name="bDeleteMember" Content="Delete" HorizontalAlignment="Left" Margin="35,172,0,0" VerticalAlignment="Top" FontSize="16px"  Height="30px" Width="80" Click="bDeleteMember_Click"/>
+        <Button x:Name="bChangeMember" Content="Change" HorizontalAlignment="Left" Margin="35,207,0,0" VerticalAlignment="Top" FontSize="16px"  Height="30px" Width="80" Click="bChangeMember_Click"/>
     </Grid>
 
 </Window>

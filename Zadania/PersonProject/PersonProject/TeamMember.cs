@@ -12,7 +12,7 @@ namespace PersonProject
         public DateTime signingTime;
         public string function;
 
-        public TeamMember()
+        public TeamMember() : base()
         {
 
         }
@@ -23,7 +23,7 @@ namespace PersonProject
         }
         public override string ToString()
         {
-            return base.ToString() + (" " + this.signingTime.ToShortDateString() + " " + this.function);    
+            return base.ToString() + (" " + this.function);    
         }
         public Object Clone()
         {

@@ -52,11 +52,8 @@ namespace PersonProject
         //Constructors
         public Person()
         {
-            birthDate = DateTime.Now;
-            SocialId = "00000000000";
-            Name = "Przemek";
-            surname = "Generyczny";
-            sex = Sex.Other;
+            name = null;
+            surname = null;
         }
         void setName(string name, string surname)
         {
@@ -70,7 +67,7 @@ namespace PersonProject
         public Person(string name, string surname, string DateofBirth, string socialid, Sex sex)
         {
             setName(name, surname);
-            DateTime.TryParseExact(DateofBirth, new[] { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy", "dd-MM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out birthDate);
+            DateTime.TryParseExact(DateofBirth, new[] { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy", "dd-MM-yyyy", "dd-MMM-yyyy" }, null, System.Globalization.DateTimeStyles.None, out birthDate);
             this.sex = sex;
             //            Console.WriteLine("Is Social ID correct: " + isSocialIdCorrect(socialid));
             if (!isSocialIdCorrect(socialid))

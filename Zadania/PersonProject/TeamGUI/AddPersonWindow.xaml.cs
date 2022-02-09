@@ -21,37 +21,107 @@ namespace TeamGUI
     /// </summary>
     public partial class AddPersonWindow : Window
     {
+
+        private TeamManager man;
         private Person prs;
-        public AddPersonWindow(Person person):this()
+        private TeamMember mem;
+        public AddPersonWindow(TeamManager person):this()
         {
+            
             prs = person;
-            if(person is TeamManager)
-            {
+            
+            
                 tbSocialID.Text = person.SocialId;
                 tbName.Text = person.Name;
                 tbSurname.Text = person.Surname;
-                tbBirthDate.Text = person.birthDate.ToString("dd-MMM-yyyy");
+                tbBirthDate.Text = (person.birthDate != DateTime.MinValue? person.birthDate.ToString(): "");
                 cbGender.SelectedIndex = ((int)person.sex);
-            }
+                lbExperience.Visibility = Visibility.Visible;
+                tbExperience.Visibility = Visibility.Visible;
+                tbExperience.Text = person.experience.ToString();
+            
+        }
+
+        public AddPersonWindow(TeamMember person) : this()
+        {
+
+            prs = person;
+
+            tbSocialID.Text = person.SocialId;
+            tbName.Text = person.Name;
+            tbSurname.Text = person.Surname;
+            tbBirthDate.Text = (person.birthDate != DateTime.MinValue ? person.birthDate.ToString() : "");
+            cbGender.SelectedIndex = ((int)person.sex);
+            lbFunction.Visibility = Visibility.Visible;
+            tbFunction.Visibility = Visibility.Visible;
+            tbFunction.Text = person.function;
+
         }
         public AddPersonWindow()
         {
             InitializeComponent();
         }
 
-        public void AcceptOnClick()
+        private void bCancel_Click(object sender, RoutedEventArgs e)
         {
-            if(tbSocialID.Text != "" && tbName.Text != "" && tbSurname.Text != "")
+            DialogResult = false;
+        }
+       
+        private void bAccept_Click(object sender, RoutedEventArgs e)
+        {
+            
+            if (tbSocialID.Text != "" && tbName.Text != "" && tbSurname.Text != "" && cbGender.SelectedIndex != -1)
             {
+                string[] fdate = { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy", "dd-MMM-yyyy" };
+
                 prs.SocialId = tbSocialID.Text;
                 prs.Name = tbName.Text;
                 prs.Surname = tbSurname.Text;
-                string[] fdate = {"yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy"};
-                DateTime.TryParseExact(tbBirthDate.Text, fdate, null, DateTimeStyles.None, out DateTime date);
+
+
+                if (!DateTime.TryParseExact(tbBirthDate.Text, fdate, null, DateTimeStyles.None, out DateTime date))
+                {
+                    string message = "Wrong date format! Please try the following: \n";
+                    for (int i = 0; i < fdate.Length; i++)
+                    {
+                        message += (fdate[i] + (i==fdate.Length-1? "" : ", "));
+                    }
+                    MessageBox.Show(message);
+                }
+                else
+                {
+                    Console.WriteLine(date.ToString());
+                    prs.birthDate = date;
+                    prs.sex = (Sex)cbGender.SelectedIndex;
+                    
+                    if(prs is TeamManager && tbExperience.Text !="") 
+                    {
+                        man = (TeamManager)prs;
+                        if(int.TryParse(tbExperience.Text, out man.experience))
+                        {
+                            DialogResult = true;
+                        }
+                        else
+                        {
+                            MessageBox.Show("Not a number!");
+                        }
+                    }else if(prs is TeamMember && tbFunction.Text != "")
+                    {
+                        mem = (TeamMember)prs;
+                        mem.function = tbFunction.Text;
+                        DialogResult = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("Function cannot be empty!");
+                    }
+                }
             }
+            else
+            {
+                MessageBox.Show("Input cannot be empty!");
+            }
+            
         }
-
-
-        
     }
 }
