@@ -142,10 +142,17 @@ namespace TeamGUI
 
         private void bChangeMember_Click(object sender, RoutedEventArgs e)
         {
-            TeamMember a = (TeamMember)lbMembersView.SelectedItem;
-            AddPersonWindow add = new AddPersonWindow(a);
-            add.ShowDialog();
-            Refresh();
+            if (lbMembersView.SelectedIndex >= 0)
+            {
+                TeamMember a = (TeamMember)lbMembersView.SelectedItem;
+                AddPersonWindow add = new AddPersonWindow(a);
+                add.ShowDialog();
+                Refresh();
+            }
+            else
+            {
+                MessageBox.Show("Choose an employee first!");
+            }
         }
 
     }

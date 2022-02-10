@@ -34,7 +34,7 @@ namespace TeamGUI
                 tbSocialID.Text = person.SocialId;
                 tbName.Text = person.Name;
                 tbSurname.Text = person.Surname;
-                tbBirthDate.Text = (person.birthDate != DateTime.MinValue? person.birthDate.ToString(): "");
+                tbBirthDate.Text = (person.birthDate != DateTime.MinValue? person.birthDate.ToShortDateString(): "");
                 cbGender.SelectedIndex = ((int)person.sex);
                 lbExperience.Visibility = Visibility.Visible;
                 tbExperience.Visibility = Visibility.Visible;
@@ -50,7 +50,7 @@ namespace TeamGUI
             tbSocialID.Text = person.SocialId;
             tbName.Text = person.Name;
             tbSurname.Text = person.Surname;
-            tbBirthDate.Text = (person.birthDate != DateTime.MinValue ? person.birthDate.ToString() : "");
+            tbBirthDate.Text = (person.birthDate != DateTime.MinValue ? person.birthDate.ToShortDateString() : "");
             cbGender.SelectedIndex = ((int)person.sex);
             lbFunction.Visibility = Visibility.Visible;
             tbFunction.Visibility = Visibility.Visible;
@@ -72,7 +72,7 @@ namespace TeamGUI
             
             if (tbSocialID.Text != "" && tbName.Text != "" && tbSurname.Text != "" && cbGender.SelectedIndex != -1)
             {
-                string[] fdate = { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy", "dd-MMM-yyyy" };
+                string[] fdate = { "yyyy-MM-dd", "yyyy/MM/dd", "MM/dd/yy", "dd-MMM-yy", "dd-MMM-yyyy", "dd.MM.yyyy" };
 
                 prs.SocialId = tbSocialID.Text;
                 prs.Name = tbName.Text;
